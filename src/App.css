@@ -1,16 +1,17 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+  font-weight: 600;
 }
 
 .App-header {
@@ -28,11 +29,55 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-input {
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid white;
+  cursor: pointer;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.App-img-box {
+  height: 250px;
+  width: 500px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.img-box {
+  height: 250px;
+  max-width: 250px;
+  width: 100%;
+}
+
+.img-box img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+  max-height: 250px;
+}
+
+.divider {
+  height: 100%;
+  border: 1px solid white;
+}
+.pointer{
+  cursor: pointer;
+}
+
+#fileSelector {
+  display: none
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+  padding: 10px 20px;
+  margin-top: 10px;
 }
