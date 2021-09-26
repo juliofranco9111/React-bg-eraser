@@ -9,6 +9,8 @@ function App() {
     localUrl: null,
   });
 
+  const [colorPicker, setColorPicker] = useState(false)
+
   const handleClick = () => {
     const input = document.getElementById('fileSelector');
     input.click();
@@ -18,8 +20,7 @@ function App() {
 
   useEffect(() => {
     console.log(error, '*****APP******');
-  }, [error])
-
+  }, [error]);
 
   const handleChange = (e) => {
     e.preventDefault();
@@ -36,15 +37,14 @@ function App() {
 
   return (
     <div className='App-header'>
-      <h1>Upload an image to
-remove the background</h1>
+      <h1>Upload an image to remove the background</h1>
 
       <div onClick={handleClick} className='App-input'>
         Click para agregar una imagen
         <input
           id='fileSelector'
           type='file'
-          accept="image/*"
+          accept='image/*'
           name='file'
           onChange={handleChange}
         />
@@ -56,19 +56,15 @@ remove the background</h1>
         </div>
         <div className='divider'></div>
         <div className='img-box'>
-          {
-            loading ? <h1>Loading</h1> : 
-            <img src={url} alt='' />
-
-          }
-          {
-
-            error &&
-            <p>Error {error}</p>
-          }
+          {loading ? <h1>Loading</h1> : <img src={url} alt='' />}
+          {error && <p>Error {error}</p>}
         </div>
       </div>
-      <a className='pointer' download href={url}>Descargar</a>
+      <a className='pointer' download href={url}>
+        Descargar
+      </a>
+      <br/>
+      <button onClick={() => setColorPicker(true)} className='pointer'>Color</button>
     </div>
   );
 }
