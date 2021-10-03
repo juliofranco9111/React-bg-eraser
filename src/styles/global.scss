@@ -1,0 +1,91 @@
+/* 
+IMPORTS 
+*/
+@import './partials/logo';
+@import './partials/variables';
+@import './partials/container';
+@import './partials/card-image';
+@import './partials/footer';
+@import './partials/error-page';
+
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  line-height: 1.1;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  color: $black;
+  &::before {
+    content: '';
+    background-image: url('../icons/layered-waves-haikei.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 1;
+    z-index: -1;
+  }
+}
+h1 {
+  font-size: 2.5em;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: 500;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  border-radius: 999px;
+  font-size: 1.5em;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  align-items: center;
+  transition: all 300ms;
+  svg {
+    width: 1em;
+  }
+}
+
+.btn__primary {
+  background-color: $black;
+  color: $white;
+  &:hover {
+    background-color: darken($black, 10%);
+    box-shadow: 0px 0px 10px 1px rgba(133, 133, 133, 0.2);
+  }
+}
+.btn__secondary {
+  color: $black;
+  background-color: $white;
+  &:hover {
+    background-color: darken($white, 5%);
+    box-shadow: 0px 0px 10px 1px rgba(160, 159, 159, 0.2);
+  }
+}
+
+.pointer {
+  cursor: pointer;
+}
