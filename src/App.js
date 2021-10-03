@@ -1,6 +1,7 @@
 import './styles/styles.scss';
 import { Layout } from './components/Layout';
 import { ErrorPage } from './pages/ErrorPage';
+import { ResultPage } from './pages/ResultPage';
 //import { HomePage } from './pages/HomePage';
 
 function App() {
@@ -11,9 +12,10 @@ function App() {
       
  {/*    
    <HomePage />
-   */}
-   
    <ErrorPage /> 
+  */}
+   
+  <ResultPage /> 
     </Layout>
   );
 }
