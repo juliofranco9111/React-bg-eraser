@@ -52,7 +52,7 @@ export const useResponse = (image) => {
       };
       getData();
     }
-  }, [image]);
+  }, [image, error]);
 
   return { imgProcessed, urlImg, error, loading };
 };

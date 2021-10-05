@@ -47,7 +47,7 @@ export default function HomePage() {
 
   return (
     <div className='section'>
-      <div className='card-image'>
+      <div className='card-image animated fadeIn'>
         {dataImg.localImage ? (
           <img src={dataImg.localUrl} alt='local-file' />
         ) : (
@@ -62,7 +62,7 @@ export default function HomePage() {
           Upload
         </Button>
       ) : (
-        <div className='buttons_container'>
+        <div className='buttons_container animated fadeIn'>
           <Button color='primary' fn={reset} icon={cancelIcon}>
             Cancel
           </Button>

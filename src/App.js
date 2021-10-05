@@ -1,5 +1,5 @@
 import './styles/styles.scss';
-import RouterComponent from './Router';
+import RouterComponent from './router/Router';
 import { ImageProvider } from './context/ImageContext';
 
 function App() {

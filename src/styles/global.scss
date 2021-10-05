@@ -9,6 +9,7 @@ IMPORTS
 @import './partials/error-page';
 @import './partials/result-page';
 @import './partials/loading';
+@import './partials/animate';
 
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
 * {
@@ -57,7 +58,7 @@ button {
   border: none;
   cursor: pointer;
   display: flex;
-  font-size: 1.7em;
+  font-size: 1.4em;
   font-weight: 600;
   gap: 5px;
   justify-content: center;
