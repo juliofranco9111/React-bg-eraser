@@ -3,8 +3,8 @@ import { getURL } from '../helpers/getURL';
 
 const url = 'https://sdk.photoroom.com/v1/segment';
 
-export const useResponse = (image, bg = 'empty') => {
-  const [result, setResult] = useState(null);
+export const useResponse = (image) => {
+  const [imgProcessed, setImgProcessed] = useState(null);
   const [urlImg, setUrlImg] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -15,7 +15,6 @@ export const useResponse = (image, bg = 'empty') => {
         setLoading(true);
         const dataImg = new FormData();
         dataImg.append('image_file', image);
-        dataImg.append('bg-color', bg);
         const response = await fetch(url, {
           method: 'POST',
           headers: {
@@ -39,9 +38,10 @@ export const useResponse = (image, bg = 'empty') => {
         });
         if (error || !response) {
           setLoading(false);
+          setError(true)
           return;
         } else {
-          setResult(
+          setImgProcessed(
             await response.blob().then((r) => {
               setUrlImg(getURL(r));
               setLoading(false);
@@ -54,5 +54,5 @@ export const useResponse = (image, bg = 'empty') => {
     }
   }, [image]);
 
-  return [result, urlImg, error, loading];
+  return [imgProcessed, urlImg, error, loading];
 };
