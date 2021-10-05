@@ -36,9 +36,9 @@ export const useResponse = (image) => {
             return response;
           }
         });
+
         if (error || !response) {
           setLoading(false);
-          setError(true)
           return;
         } else {
           setImgProcessed(
@@ -54,5 +54,5 @@ export const useResponse = (image) => {
     }
   }, [image]);
 
-  return [imgProcessed, urlImg, error, loading];
+  return { imgProcessed, urlImg, error, loading };
 };

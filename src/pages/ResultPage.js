@@ -11,9 +11,7 @@ import { downloadIcon, homeIcon } from '../icons/icons';
 export default function ResultPage() {
   const { dataImg, setDataImage } = useContext(ImageContext);
 
-  const [imgProcessed, urlImg, error, loading] = useResponse(
-    dataImg.localImage
-  );
+  const { urlImg, error, loading } = useResponse(dataImg.localImage);
 
   const history = useHistory();
 
@@ -29,10 +27,10 @@ export default function ResultPage() {
         <Loading />
       ) : (
         <>
-          <div className='card-image-result'>
+          <div className='card-image-container'>
             <img src={urlImg} alt='local-file' />
           </div>
-          <div className='result__page__buttons_container'>
+          <div className='buttons_container'>
             <Link to='/'>
               <Button color='primary' icon={homeIcon}>
                 Home

@@ -1,13 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { ImageEmpty } from '../components/ImageEmpty';
 import { ImageContext } from '../context/ImageContext';
 import { getURL } from '../helpers/getURL';
-import { sendIcon, uploadIcon } from '../icons/icons';
+import { cancelIcon, sendIcon, uploadIcon } from '../icons/icons';
 
 export default function HomePage() {
   const { dataImg, setDataImage } = useContext(ImageContext);
+
+  useEffect(() => {
+    setDataImage({...dataImg,
+      localImage: null,
+      localUrl: null,})
+  }, [])
+
+
   const history = useHistory();
 
   const handleChange = (e) => {
@@ -26,8 +34,16 @@ export default function HomePage() {
   };
 
   const send = () => {
-    history.push('/result')
-  }
+    history.push('/result');
+  };
+
+  const reset = () => {
+    setDataImage({
+      ...dataImg,
+      localImage: null,
+      localUrl: null,
+    });
+  };
 
   return (
     <div className='section'>
@@ -39,13 +55,21 @@ export default function HomePage() {
         )}
       </div>
       {!dataImg.localImage ? (
-        <Button color='secondary' fn={handleClick} icon={uploadIcon}>
+        <Button
+          color='secondary'
+          fn={handleClick}
+          icon={uploadIcon}>
           Upload
         </Button>
       ) : (
-        <Button color='secondary' fn={send} icon={sendIcon}>
-          Go!
-        </Button>
+        <div className='buttons_container'>
+          <Button color='primary' fn={reset} icon={cancelIcon}>
+            Cancel
+          </Button>
+          <Button color='secondary' fn={send} icon={sendIcon}>
+            Go!
+          </Button>
+        </div>
       )}
     </div>
   );
