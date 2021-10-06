@@ -10,11 +10,11 @@ export default function HomePage() {
   const { dataImg, setDataImage } = useContext(ImageContext);
 
   useEffect(() => {
-    setDataImage({...dataImg,
-      localImage: null,
-      localUrl: null,})
-  }, [])
-
+    function clearData() {
+      setDataImage({ ...dataImg, localImage: null, localUrl: null });
+    }
+    clearData();
+  }, []);
 
   const history = useHistory();
 
@@ -55,10 +55,7 @@ export default function HomePage() {
         )}
       </div>
       {!dataImg.localImage ? (
-        <Button
-          color='secondary'
-          fn={handleClick}
-          icon={uploadIcon}>
+        <Button color='secondary' fn={handleClick} icon={uploadIcon}>
           Upload
         </Button>
       ) : (

@@ -26,7 +26,7 @@ export const useResponse = (image) => {
             response
               .json()
               .then((r) => {
-                throw new Error(r.message);
+                //throw new Error(r.message);
               })
               .catch((error) => {
                 setError(error.message);

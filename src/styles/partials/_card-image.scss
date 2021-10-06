@@ -1,7 +1,6 @@
 .card-image {
   width: 100%;
   display: flex;
-  max-height: 300px;
   position: relative;
   flex-direction: column;
   margin-bottom: 20px;
@@ -19,16 +18,15 @@
   .card-image-empty {
     border: $border;
     width: 100%;
-    height: 100%;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 60px 0px;
     display: flex;
     position: relative;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(60px);
     svg {
       width: 110px;
       height: 110px;
@@ -39,5 +37,21 @@
 
   #card-image-input {
     display: none;
+  }
+}
+
+@media screen and (min-width: 500px){
+  .card-image{
+
+    img {
+      
+      max-height: 600px;
+      
+    }
+
+    .card-image-empty{
+      height: 600px;
+
+    }
   }
 }

@@ -58,19 +58,18 @@ button {
   border: none;
   cursor: pointer;
   display: flex;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 600;
   gap: 5px;
   justify-content: center;
   margin: 0px auto;
-  max-width: 400px;
   outline: none;
   outline: none;
   padding: 10px;
   transition: all 300ms;
   width: 100%;
   svg {
-    width: 1.1em;
+    width: 0.9em;
   }
 }
 
@@ -100,4 +99,12 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+
+@media (min-width: 500px) {
+  button{
+    font-size: 1.8em;
+    padding: 20px;
+  }
 }

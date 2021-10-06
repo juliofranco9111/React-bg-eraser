@@ -9,7 +9,8 @@ export const ImageProvider = ({children}) => {
         localImage: null,
         localUrl: null,
         imgFetched: null,
-        urlImgFetched: null
+        urlImgFetched: null,
+        error: null,
     })
     return (
         <ImageContext.Provider value={{

@@ -17,6 +17,10 @@ export default function ResultPage() {
 
   useEffect(() => {
     if (error) {
+      setDataImage({
+        ...dataImg,
+        error
+      })
       history.push('/error');
     }
   }, [error]);

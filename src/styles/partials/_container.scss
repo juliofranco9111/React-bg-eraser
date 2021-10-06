@@ -19,7 +19,8 @@
 .buttons_container{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 10px;
   button{
-      font-size:1.2em;
+    width: 100%;
   }
 }
