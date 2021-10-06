@@ -1,8 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect } from 'react';
 import { useHistory } from 'react-router';
 import { Link } from 'react-router-dom';
 import { Button } from '../components/Button';
-import { ImageEmpty } from '../components/ImageEmpty';
 import { Loading } from '../components/Loading';
 import { ImageContext } from '../context/ImageContext';
 import { useResponse } from '../hooks/useResponse';
@@ -11,16 +11,15 @@ import { downloadIcon, homeIcon } from '../icons/icons';
 export default function ResultPage() {
   const { dataImg, setDataImage } = useContext(ImageContext);
 
-  const { urlImg, error, loading } = useResponse(dataImg.localImage);
-
   const history = useHistory();
 
+  const { urlImg, error, loading } = useResponse(dataImg.localImage);
   useEffect(() => {
     if (error) {
       setDataImage({
         ...dataImg,
-        error
-      })
+        error,
+      });
       history.push('/error');
     }
   }, [error]);
