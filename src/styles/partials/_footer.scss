@@ -1,5 +1,5 @@
 .footer {
-  color: white;
+  color: $black;
   display: flex;
   flex-direction: column;
   height: auto;
@@ -7,5 +7,9 @@
   text-align: center;
   padding-bottom: 20px;
   width: 90%;
+  h3{
+    font-size: 1em;
+    font-weight: 600;
+  }
  
 }

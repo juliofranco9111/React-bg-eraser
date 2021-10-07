@@ -1,6 +1,9 @@
 .error__section{
     text-align: center;
-    color: white;
+    color: $black;
+    background-color: $bg-glass;
+    padding: 20px;
+    border-radius: 20px;
 
     .feather-alert-triangle{
         width: 85px;

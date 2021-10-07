@@ -16,7 +16,7 @@ export default function ErrorPage() {
       <br />
 
       <Link to='/'>
-        <Button color='secondary' icon={homeIcon}>
+        <Button color='primary' icon={homeIcon}>
           Home
         </Button>
       </Link>

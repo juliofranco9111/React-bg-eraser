@@ -54,21 +54,22 @@ export default function HomePage() {
         ) : (
           <ImageEmpty fnClick={handleClick} fnChangeInput={handleChange} />
         )}
+
+        {!dataImg.localImage ? (
+          <Button color='primary' fn={handleClick} icon={uploadIcon}>
+            Upload
+          </Button>
+        ) : (
+          <div className='buttons_container animated fadeIn'>
+            <Button color='primary' fn={reset} icon={cancelIcon}>
+              Cancel
+            </Button>
+            <Button color='secondary' fn={send} icon={sendIcon}>
+              Go!
+            </Button>
+          </div>
+        )}
       </div>
-      {!dataImg.localImage ? (
-        <Button color='secondary' fn={handleClick} icon={uploadIcon}>
-          Upload
-        </Button>
-      ) : (
-        <div className='buttons_container animated fadeIn'>
-          <Button color='primary' fn={reset} icon={cancelIcon}>
-            Cancel
-          </Button>
-          <Button color='secondary' fn={send} icon={sendIcon}>
-            Go!
-          </Button>
-        </div>
-      )}
     </div>
   );
 }

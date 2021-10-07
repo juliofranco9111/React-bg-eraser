@@ -25,7 +25,7 @@ export default function ResultPage() {
   }, [error]);
 
   return (
-    <div className='section result__page_section'>
+    <div className='section result-page-section card-image'>
       {loading ? (
         <Loading />
       ) : (

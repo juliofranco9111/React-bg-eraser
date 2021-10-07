@@ -6,8 +6,8 @@ export const Loading = () => {
     <div className="loading">
 
       {loadingIcon}
-      <br/>
-      <h1 className="">Loading...</h1>
+      
+      <h1 className="loading-text">Loading...</h1>
     </div>
   );
 };

@@ -5,11 +5,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: $white;
+  color: $black;
 
-  
-.feather-refresh-cw{
-    color: $white;
-    width: 80px;    
+  .loading-text {
+    font-weight: 600;
+    margin-top: 30px;
+  }
+
+  .feather-refresh-cw {
+    color: $black;
+    width: 80px;
   }
 }

@@ -1,4 +1,7 @@
-$black: #111111;
+$black: #202020;
 $white: #f4f4feee;
 
-$border: 6px solid $white;
+$bg-glass: rgba(255, 255, 255,0.8);
+
+//$border: 6px dashed $black;
+$border: 2px inset $black;
