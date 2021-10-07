@@ -25,13 +25,14 @@ export default function ResultPage() {
   }, [error]);
 
   return (
-    <div className='section result-page-section card-image'>
+    <>
       {loading ? (
         <Loading />
       ) : (
-        <>
-          <div className='card-image-container'>
-            <img src={urlImg} alt='local-file' />
+        <div className='card-image-container'>
+          <div className='card-image'>
+
+          <img src={urlImg} alt='local-file' />
           </div>
           <div className='buttons_container'>
             <Link to='/'>
@@ -46,8 +47,8 @@ export default function ResultPage() {
               </Button>
             </a>
           </div>
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 }

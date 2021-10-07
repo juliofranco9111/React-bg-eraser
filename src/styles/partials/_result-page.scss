@@ -1,6 +1,6 @@
 
   .card-image-container {
-    width: 100%;
+    width: 90%;
     border-radius: 20px;
     background-color: transparent;
     display: flex;
@@ -18,10 +18,3 @@
     }
   }
 
-@media screen and (min-width: 500px) {
-    .card-image-container {
-      img {
-        max-height: 600px;
-      }
-    }
-}
