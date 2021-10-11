@@ -1,27 +1,34 @@
 .container {
-  width: 100%;
-  min-height: 100vh;
+  align-items: center;
   display: flex;
-  margin: 0px auto;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  margin: 0px auto;
   max-width: 500px;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .section{
-  width: 90%;
-  max-width: 600px;
   display: flex;
   flex-direction: column;
+  max-width: 600px;
+  width: 90%;
 }
 
-.buttons_container{
+.buttons-container{
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
   margin-top: 20px;
   button{
     width: 100%;
+  }
+}
+
+.card-image-container{
+  .buttons-container{
+    margin-bottom: 0px;
   }
 }

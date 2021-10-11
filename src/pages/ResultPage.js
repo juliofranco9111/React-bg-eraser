@@ -13,7 +13,7 @@ export default function ResultPage() {
 
   const history = useHistory();
 
-  const { urlImg, error, loading } = useResponse(dataImg.localImage);
+  const { urlImg, error, loading } = useResponse({image: dataImg.localImage,bg: dataImg.color});
   useEffect(() => {
     if (error) {
       setDataImage({
@@ -34,7 +34,7 @@ export default function ResultPage() {
 
           <img src={urlImg} alt='local-file' />
           </div>
-          <div className='buttons_container'>
+          <div className='buttons-container'>
             <Link to='/'>
               <Button color='primary' icon={homeIcon}>
                 Home

@@ -2,6 +2,7 @@
 IMPORTS 
 */
 @import './partials/variables';
+@import './partials/color-picker';
 @import './partials/logo';
 @import './partials/container';
 @import './partials/card-image';
@@ -11,28 +12,28 @@ IMPORTS
 @import './partials/loading';
 @import './partials/animate';
 
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap);
 * {
-  margin: 0px;
-  padding: 0px;
   box-sizing: border-box;
   line-height: 1.1;
+  margin: 0px;
+  padding: 0px;
 }
 body {
+  color: $black;
   font-family: 'Poppins', sans-serif;
   position: relative;
-  color: $black;
   &::before {
-    content: '';
     background-image: url('../icons/wave.svg');
-    background-size: cover;
     background-repeat: no-repeat;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    background-size: cover;
     bottom: 0px;
+    content: '';
     left: 0px;
     opacity: 1;
+    position: absolute;
+    right: 0px;
+    top: 0px;
     z-index: -1;
   }
 }
@@ -97,15 +98,15 @@ button {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 
 @media (min-width: 500px) {
   button{
     font-size: 1.5em;
-    padding: 10px;
     max-width: 400px;
+    padding: 10px;
   }
 }
