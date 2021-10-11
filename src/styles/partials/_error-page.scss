@@ -1,13 +1,13 @@
 .error-section{
-    text-align: center;
-    color: $black;
     background-color: $bg-glass;
-    padding: 20px;
     border-radius: 20px;
+    color: $black;
+    padding: 20px;
+    text-align: center;
 
     .feather-alert-triangle{
-        width: 85px;
         margin-bottom: 20px;
+        width: 85px;
     }
 
     h2{

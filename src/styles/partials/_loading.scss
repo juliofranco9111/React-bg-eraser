@@ -1,11 +1,11 @@
 .loading {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   color: $black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
 
   .loading-text {
     font-weight: 600;

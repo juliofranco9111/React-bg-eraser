@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+  margin-top: 20px;
   h4 {
-    max-width: 70%;
     font-weight: 600;
+    max-width: 70%;
   }
 
   .picker {
@@ -14,17 +15,17 @@
   }
 
   .swatch {
-    width: 30px;
-    height: 30px;
+    align-items: center;
     border-radius: 999px;
     border: 3px solid #fff;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
     color: red;
+    cursor: pointer;
     display: flex;
-    justify-content: center;
-    align-items: center;
     font-weight: 900;
+    height: 30px;
+    justify-content: center;
+    width: 30px;
   }
 
 }
