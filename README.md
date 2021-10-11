@@ -1,4 +1,4 @@
-# Bg Eraser 📷
+# Bg Eraser ![icon-48x48](https://user-images.githubusercontent.com/65989119/136859998-441a666a-80cd-4258-a609-0f391cf26f88.png)
 
 Progressive Web App creada con React Js
 
