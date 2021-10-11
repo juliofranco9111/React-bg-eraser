@@ -11,6 +11,8 @@ export const ImageProvider = ({children}) => {
         imgFetched: null,
         urlImgFetched: null,
         error: null,
+        picker: false,
+        color: 'transparent'
     })
     return (
         <ImageContext.Provider value={{

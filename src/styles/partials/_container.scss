@@ -16,12 +16,19 @@
   flex-direction: column;
 }
 
-.buttons_container{
+.buttons-container{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin-top: 20px;
+  margin-bottom: 20px;
   button{
     width: 100%;
+  }
+}
+
+.card-image-container{
+  .buttons-container{
+    margin-bottom: 0px;
   }
 }

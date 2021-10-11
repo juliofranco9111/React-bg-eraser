@@ -2,6 +2,7 @@
 IMPORTS 
 */
 @import './partials/variables';
+@import './partials/color-picker';
 @import './partials/logo';
 @import './partials/container';
 @import './partials/card-image';
@@ -11,7 +12,7 @@ IMPORTS
 @import './partials/loading';
 @import './partials/animate';
 
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap);
 * {
   margin: 0px;
   padding: 0px;

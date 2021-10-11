@@ -9,7 +9,7 @@
   border-radius: 20px;
   justify-content: center;
   max-width: 400px;
-  max-height: 400px;
+  min-height: 400px;
   margin: 20px auto;
 
   img {
@@ -45,7 +45,7 @@
 @media screen and (min-width: 500px) {
   .card-image {
     .card-image-empty {
-      height: 500px;
+      max-height: 500px;
     }
   }
 }

@@ -6,6 +6,8 @@ import { ImageEmpty } from '../components/ImageEmpty';
 import { ImageContext } from '../context/ImageContext';
 import { getURL } from '../helpers/getURL';
 import { cancelIcon, sendIcon, uploadIcon } from '../icons/icons';
+import { ColorPicker } from '../components/ColorPicker';
+import { HexColorPicker } from 'react-colorful';
 
 export default function HomePage() {
   const { dataImg, setDataImage } = useContext(ImageContext);
@@ -46,21 +48,31 @@ export default function HomePage() {
     });
   };
 
+  const changeColor = (color) => {
+    setDataImage({
+      ...dataImg,
+      color: color,
+    });
+  };
+
   return (
     <div className='section'>
       <div className='card-image animated fadeIn'>
-        {dataImg.localImage ? (
+        {dataImg.picker ? (
+          <HexColorPicker color={dataImg.color} onChange={changeColor} />
+        ) : dataImg.localImage && !dataImg.picker ? (
           <img src={dataImg.localUrl} alt='local-file' />
         ) : (
           <ImageEmpty fnClick={handleClick} fnChangeInput={handleChange} />
         )}
-
-        {!dataImg.localImage ? (
+        {!dataImg.localImage && !dataImg.picker && (
           <Button color='primary' fn={handleClick} icon={uploadIcon}>
             Upload
           </Button>
-        ) : (
-          <div className='buttons_container animated fadeIn'>
+        )}
+
+        {dataImg.localImage && !dataImg.picker && (
+          <div className='buttons-container animated fadeIn'>
             <Button color='primary' fn={reset} icon={cancelIcon}>
               Cancel
             </Button>
@@ -69,6 +81,7 @@ export default function HomePage() {
             </Button>
           </div>
         )}
+        {dataImg.localImage && <ColorPicker />}
       </div>
     </div>
   );

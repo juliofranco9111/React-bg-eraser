@@ -1,0 +1,35 @@
+.color-picker {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  h4 {
+    max-width: 70%;
+    font-weight: 600;
+  }
+
+  .picker {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;    
+  }
+
+  .swatch {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+  }
+
+}
+
+.react-colorful {
+  border-radius: 20px;
+  cursor: default;
+}
