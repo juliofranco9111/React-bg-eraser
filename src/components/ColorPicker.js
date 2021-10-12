@@ -25,7 +25,7 @@ export const ColorPicker = () => {
   return (
     <>
       <div className='color-picker'>
-        <h4>Select background color: {dataImg.color}</h4>
+        <h4>Select background color: {dataImg.color.includes('NaN') ? 'transparent' :dataImg.color}</h4>
         <div className='picker'>
           <button
             className='swatch'
