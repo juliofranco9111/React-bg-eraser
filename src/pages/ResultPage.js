@@ -33,7 +33,6 @@ export default function ResultPage() {
           <div className='card-image'>
 
           <img src={urlImg} alt='local-file' />
-          </div>
           <div className='buttons-container'>
             <Link to='/'>
               <Button color='primary' icon={homeIcon}>
@@ -46,6 +45,7 @@ export default function ResultPage() {
                 Download
               </Button>
             </a>
+          </div>
           </div>
         </div>
       )}
